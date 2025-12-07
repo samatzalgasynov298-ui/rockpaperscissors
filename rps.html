@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="rps.css" />
-    <title>Камень-Ножницы-Бумага</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors — Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">RPS</div>
+</header>
+
+<main id="gameScreen">
     <h1>Камень — Ножницы — Бумага</h1>
 
-    <div class="choices">
-      <button onclick="play('камень')">🪨 Камень</button>
-      <button onclick="play('ножницы')">✂️ Ножницы</button>
-      <button onclick="play('бумага')">📄 Бумага</button>
+    <div class="buttons">
+        <button data-choice="камень" class="game-btn">Камень</button>
+        <button data-choice="ножницы" class="game-btn">Ножницы</button>
+        <button data-choice="бумага" class="game-btn">Бумага</button>
     </div>
 
-    <div id="you">Выбор игрока: —</div>
-    <div id="cpu">Выбор компьютера: —</div>
+    <div class="info">
+        <p id="player">Ваш выбор: —</p>
+        <p id="computer">Компьютер: —</p>
 
-    <div id="result">Сделайте выбор!</div>
-    <div id="score">Счёт: 0 : 0</div>
+        <p id="message" class="msg">Ваш ход</p>
 
-    <script src="rps.js"></script>
-  </body>
+        <div class="score-box">
+            <span class="score-label">Счёт:</span>
+            <span id="score" class="score-numbers">0 : 0</span>
+        </div>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
 </html>
