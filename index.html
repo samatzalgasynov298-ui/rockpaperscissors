@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Камень-Ножницы-Бумага</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #222;
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        margin-top: 40px;
+    }
+
+    .choices {
+        margin-top: 40px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 15px 25px;
+        margin: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #444;
+        color: white;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #666;
+        transform: scale(1.1);
+    }
+
+    #result, #score, #cpu, #you {
+        margin-top: 20px;
+        font-size: 24px;
+    }
+
+    .highlight {
+        font-weight: bold;
+        color: #00eaff;
+    }
+</style>
+</head>
+<body>
+
+<h1>Камень — Ножницы — Бумага</h1>
+
+<div class="choices">
+    <button onclick="play('камень')">🪨 Камень</button>
+    <button onclick="play('ножницы')">✂️ Ножницы</button>
+    <button onclick="play('бумага')">📄 Бумага</button>
+</div>
+
+<div id="you">Выбор игрока: —</div>
+<div id="cpu">Выбор компьютера: —</div>
+
+<div id="result">Сделайте выбор!</div>
+<div id="score">Счёт: 0 : 0</div>
+
+<script>
+    let playerScore = 0;
+    let computerScore = 0;
+
+    function getComputerChoice() {
+        const choices = ["камень", "ножницы", "бумага"];
+        return choices[Math.floor(Math.random() * 3)];
+    }
+
+    function play(playerChoice) {
+        const computerChoice = getComputerChoice();
+
+        document.getElementById("you").innerHTML = "Выбор игрока: <span class='highlight'>" + playerChoice + "</span>";
+        document.getElementById("cpu").innerHTML = "Выбор компьютера: <span class='highlight'>" + computerChoice + "</span>";
+
+        let result = "";
+
+        if (playerChoice === computerChoice) {
+            result = "Ничья!";
+        } else if (
+            (playerChoice === "камень" && computerChoice === "ножницы") ||
+            (playerChoice === "ножницы" && computerChoice === "бумага") ||
+            (playerChoice === "бумага" && computerChoice === "камень")
+        ) {
+            result = "Вы выиграли!";
+            playerScore++;
+        } else {
+            result = "Вы проиграли!";
+            computerScore++;
+        }
+
+        document.getElementById("result").innerHTML = result;
+        document.getElementById("score").innerHTML = `Счёт: ${playerScore} : ${computerScore}`;
+    }
+</script>
+
+</body>
+</html>
