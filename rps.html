@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="rps.css" />
+    <title>Камень-Ножницы-Бумага</title>
+  </head>
+  <body>
+    <h1>Камень — Ножницы — Бумага</h1>
+
+    <div class="choices">
+      <button onclick="play('камень')">🪨 Камень</button>
+      <button onclick="play('ножницы')">✂️ Ножницы</button>
+      <button onclick="play('бумага')">📄 Бумага</button>
+    </div>
+
+    <div id="you">Выбор игрока: —</div>
+    <div id="cpu">Выбор компьютера: —</div>
+
+    <div id="result">Сделайте выбор!</div>
+    <div id="score">Счёт: 0 : 0</div>
+
+    <script src="rps.js"></script>
+  </body>
+</html>
