@@ -1,0 +1,142 @@
+body {
+  font-family: "Inter", sans-serif;
+  background: #002b36;
+  color: #eee8d5;
+  margin: 0;
+  text-align: center;
+}
+
+/* === INTRO PAGE === */
+.intro-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #002b36;
+  z-index: 10;
+}
+
+.intro-container {
+  text-align: center;
+}
+
+.intro-title {
+  font-size: 52px;
+  color: #2aa198;
+  margin-bottom: 40px;
+}
+
+.intro-btn {
+  background: #268bd2;
+  padding: 18px 45px;
+  font-size: 22px;
+  color: #002b36;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.25s;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.intro-btn:hover {
+  background: #2aa198;
+}
+
+/* === GAME PAGE === */
+.game-wrapper {
+  display: none; /* Скрыто по умолчанию */
+}
+
+.topbar {
+  background: #073642;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #586e75;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2aa198;
+}
+
+h1 {
+  color: #2aa198;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.game-btn {
+  padding: 14px 30px;
+  margin: 10px;
+  background: #073642;
+  border: 2px solid #268bd2;
+  color: #eee8d5;
+  font-size: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.game-btn:hover {
+  background: #268bd2;
+  color: #002b36;
+}
+
+.info p {
+  font-size: 20px;
+  margin: 5px 0;
+  color: #93a1a1;
+}
+
+.highlight {
+  color: #2aa198;
+  font-weight: bold;
+}
+
+/* === SCORE STYLE === */
+.score-box {
+  margin-top: 25px;
+  background: #073642;
+  border: 2px solid #2aa198;
+  padding: 12px 25px;
+  display: inline-flex;
+  gap: 10px;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.score-label {
+  font-size: 22px;
+  color: #2aa198;
+}
+
+.score-numbers {
+  font-size: 26px;
+  color: #eee8d5;
+  font-weight: bold;
+}
+
+.msg {
+  margin-top: 25px;
+  font-size: 24px;
+  color: #b58900;
+  min-height: 30px;
+}
+
+/* === ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ЛОГИКИ === */
+.hidden {
+  display: none !important;
+}
+
+.control-area {
+  margin-top: 30px;
+}
